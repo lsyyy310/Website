@@ -1,0 +1,28 @@
+html * {
+      font-family: "PingFang TC", "微軟正黑體", sans-serif !important;
+    }
+
+body {
+  background-color: #FFFBF5;
+  margin: 0;
+}
+
+nav a {
+  font-size: 24px;
+  color: inherit;
+  text-decoration: none;
+  margin: 0 .3em;
+}
+
+nav a:hover {
+  color: #FFFBF5;
+}
+
+h1 {
+  text-shadow: 0.1em 0.1em 0.1em #B6BBBE;
+  font-size: 32px;
+  color: #82ABA3;
+  text-align: left;
+  line-height:1.2;
+  padding: 1em 1.3em;
+}
