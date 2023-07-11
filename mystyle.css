@@ -20,7 +20,7 @@ nav a:hover {
   cursor: pointer;
   font-size: 20px;
   transform: translateY(-.1em);
-/*  transform: translate(-px, -2px);*/
+  transition: font-size 200ms;
 }
 
 h1 {
