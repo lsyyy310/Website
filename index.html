@@ -4,19 +4,65 @@
   <meta charset="utf-8">
   <title>Personal Website</title>
   <style type="text/css">
-    .heading1 {
-      font-family: "Times New Roman";
-      color: #596A74;
+    html * {
+      font-family: "PingFang TC", "微軟正黑體", sans-serif !important;
     }
 
-    .heading2 {
-      font-family: Arial;
-      color: #596A74;
+    nav a {
+      font-size: 24px;
+      color: inherit;
+      text-decoration: none;
+      margin: 0 .3em;
+    }
+
+    nav a:hover {
+      color: #FFFBF5;
+    }
+
+    h1 {
+      text-shadow: 0.1em 0.1em 0.1em #B6BBBE;
+      font-size: 32px;
+      color: #82ABA3;
+      text-align: left;
+      line-height:1.2;
+      padding: 1em 1.3em;
+    }
+
+    .subheading {
+      font-size: 24px;
+      color: #7A848D;
+    }
+
+    .navbar {
+      background-color: #D0DCDD;
+      margin: 0;
+      height: 60px;
+    }
+
+    .navcontent {
+      color: #82ABA3;
+      text-align: right;
+      margin: 0 20px;
+      padding: .8em .5em;
     }
   </style>
 </head>
 
-<body>
-  <h1 class="style1"><b>Lin Shu You</b></h1>
+<body style="background-color: #FFFBF5; margin: 0;">
+  <div class="navbar">
+    <nav class="navcontent">
+      <a href="index.html"><b>ABOUT</b></a>
+      <a href="project.html"><b>PROJECT</b></a>
+    </nav>
+  </div>
+
+  <p>
+  <h1>
+    <span style="letter-spacing: .3em;">林淑佑</span>
+    <br />
+    Lin Shu-You
+  </h1>
+  </p>
+
 </body>
 </html>
