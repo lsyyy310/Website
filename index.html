@@ -3,43 +3,66 @@
 <head>
   <meta charset="utf-8">
   <title>Personal Website</title>
-  <link rel="stylesheet" href="mystyle.css">
+  <link href="mystyle.css" rel="stylesheet">
   <style type="text/css">
-    .subheading {
-      font-size: 24px;
-      color: #7A848D;
+    img {
+      position: relative;
+      top: 1.5em;
+      left: 12.5em;
+      width: 14em;
+      height: 14em;
+      border-radius: 50%;
+      margin-left: .6em;
+      margin-top: .6em;
     }
 
-    .navbar {
-      background-color: #D0DCDD;
-      margin: 0;
-      height: 60px;
+    .profile {
+      width: 100%;
+      height: 16em;
     }
 
-    .navcontent {
-      color: #82ABA3;
-      text-align: right;
-      margin: 0 20px;
-      padding: .8em .5em;
+    .imgbg {
+      position: relative;
+      top: 2.9em;
+      left: 27.6em;
+      width: 13.5em;
+      height: 13em;
+      background-color: #F0DED4;
+      border-radius: 50%;
+    }
+
+    .name {
+      position: relative;
+      top: 1.5em;
+      left: 6.5em;
+      width: 8em;
+      height: 3em;
+      margin: .8em;
     }
   </style>
 </head>
 
+
 <body>
   <div class="navbar">
     <nav class="navcontent">
-      <a href="index.html"><b>ABOUT</b></a>
-      <a href="project.html"><b>PROJECT</b></a>
+      <div><a href="index.html"><b>HOME</b></a></div>|
+      <div><a href="about.html"><b>ABOUT</b></a></div>|
+      <div><a href="project.html"><b>PROJECT</b></a></div>|
+      <div><a href="contact.html"><b>CONTACT</b></a></div>
     </nav>
   </div>
 
-  <p>
-  <h1>
-    <span style="letter-spacing: .3em;">林淑佑</span>
-    <br />
-    Lin Shu-You
-  </h1>
-  </p>
+  <div class="profile">
+    <div class="imgbg"></div>
+    <img src="asset/avatar.png" alt="Avatar">
+
+    <h1 class="name">
+      <span style="letter-spacing: .3em;">林淑佑</span>
+      <br />
+      Lin Shu-You
+    </h1>
+  </div>
 
 </body>
 </html>
