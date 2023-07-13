@@ -1,0 +1,102 @@
+#action-menu {
+  position: relative;
+  top: 2.5em;
+  left: 47em;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#action-menu a {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+#menu_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* For browsers that do not support gradients */
+  background-color: #82ABA3;
+  background-image: linear-gradient(135deg, #82ABA3, #D3E8E3);
+  margin: auto;
+}
+
+#menu_icon .line {
+  position: relative;
+  top: .8em;
+  width: 28px;
+  height: 4px;
+  background-color: #FFFBF5;
+  border-radius: 500px;
+  margin: .4em auto;
+}
+
+#action-menu div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+}
+
+#instagram {
+  background-image: url(asset/icon/instagram.png);
+}
+#linkedin {
+  background-image: url(asset/icon/linkedin.png);
+}
+#github {
+  background-image: url(asset/icon/github.png);
+}
+#facebook {
+  background-image: url(asset/icon/facebook.png);
+}
+
+#action-menu:hover #menu_icon {
+  animation: up-n-down 600ms ease-out;
+}
+@keyframes up-n-down {
+  50% {
+    transform: translateY(10%);
+  }
+}
+
+#action-menu .social-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  transform: rotateZ(-360deg);
+  transition: all 400ms linear;
+}
+
+#action-menu:hover .social-media {
+  transform: rotateZ(360deg);
+  transition: all 400ms linear;
+}
+
+#action-menu:hover #instagram {
+  left: 110%;
+}
+#action-menu:hover #linkedin {
+  left: 220%;
+}
+#action-menu:hover #github {
+  left: 330%;
+}
+#action-menu:hover #facebook {
+  left: 440%;
+}
+
+
+

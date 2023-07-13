@@ -1,26 +1,16 @@
+html {
+  overflow-x: hidden;
+  height: 100%;
+}
+
 html * {
-      font-family: "PingFang TC", "微軟正黑體", sans-serif !important;
-    }
+  font-family: "PingFang TC", "微軟正黑體", sans-serif !important;
+}
 
 body {
+  min-height: 100%;
   background-color: #FFFBF5;
   margin: 0;
-}
-
-nav a {
-  font-size: 18px;
-  color: inherit;
-  text-decoration: none;
-  padding: .2em;
-  margin: auto;
-}
-
-nav a:hover {
-  color: #FFFBF5;
-  cursor: pointer;
-  font-size: 20px;
-  transform: translateY(-.1em);
-  transition: font-size 200ms;
 }
 
 h1 {
@@ -34,15 +24,45 @@ h1 {
 h2 {
   font-size: 24px;
   color: #7A848D;
+  text-align: left;
 }
 
-div {
-  position: relative;
-  top: 6em;
-  padding: .3em ;
+ul {
+  width: 480px;
+  list-style-type: none;
   display: flex;
+  margin: auto;
+  padding: 0;
 }
-.navbar {
+
+ul li {
+  position: relative;
+  width: 120px;
+  height: 1em;
+  margin: auto;
+}
+
+nav a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 18px;
+  color: inherit;
+  text-decoration: none;
+  padding: .2em;
+  transform: translate(-50%, -50%);
+  transition: font-size 200ms;
+}
+
+nav a:hover {
+  color: #FFFBF5;
+  cursor: pointer;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  transition: font-size 200ms;
+}
+
+#navbar {
   position: sticky;
   top: 0;
   width: 100%;
@@ -52,21 +72,13 @@ div {
 
 }
 
-.navcontent {
-  position: relative;
-  left: 56em;
+#navbar .navcontent {
+  position: absolute;
+  right: 1.5em;
   color: #82ABA3;
-  margin: 0 24px;
+  margin: auto;
   padding: .9em .5em;
   display: flex;
   justify-content: space-evenly;
 }
 
-.navcontent div {
-  width: 100px;
-  height: 2em;
-  position: relative;
-  top: -.4em;
-  padding: .1em;
-  margin: 0 .5em;
-}
