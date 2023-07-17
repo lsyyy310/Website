@@ -30,17 +30,29 @@ h1 {
 h2 {
   font-size: 34px;
   font-weight: 700;
+  letter-spacing: 1px;
   word-spacing: 2px;
   color: #82ABA3;
   text-shadow: 3px 3px 3px #B6BBBE;
   text-align: left;
 }
 
-h4 {
-  color: #2A2A2A;
+h3 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: #60656C;
 }
 
-ul {
+h4 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #60656C;
+  margin: 0;
+}
+
+#navbar ul {
   width: 480px;
   list-style-type: none;
   display: flex;
@@ -61,7 +73,7 @@ nav a {
   left: 50%;
   font-size: 18px;
   font-weight: 600;
-  color: inherit;
+  color: #82ABA3;
   text-decoration: none;
   padding: .2em;
   transform: translate(-50%, -50%);
@@ -76,9 +88,47 @@ nav a:hover {
   transition: font-size 200ms;
 }
 
+#body_bg {
+  position: relative;
+  width: 78%;
+  min-height: 1000px;
+  background-color: #EEF1EA;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #B6BBBE;
+  margin: 5em auto 3em;
+}
+
 .heading {
   position: absolute;
-  margin: 1em 1.5em;
+  left: 38px;
+  top: 34px;
+  margin: auto;
+}
+
+.subheading_circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #D7D8EA;
+}
+
+.subheading_circle .subheading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0;
+  transform: translateY(-50%);
+}
+
+.paragraph {
+  position: relative;
+  margin: 40px 45px;
+  width: auto;
+  min-height: 6.5em;
+}
+
+.paragraph div, .paragraph ul {
+  position: absolute;
 }
 
 .page_bottom {
@@ -100,6 +150,7 @@ nav a:hover {
   margin: 0;
   padding: 0;
   z-index: 999;
+
 }
 
 #navbar .navcontent {
