@@ -2,17 +2,17 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 67%);
   cursor: pointer;
   margin: auto;
 }
 
 #action-menu a {
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   cursor: pointer;
 }
 
@@ -20,8 +20,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   /* For browsers that do not support gradients */
   background-color: #82ABA3;
@@ -31,8 +31,8 @@
 
 #menu_icon .line {
   position: relative;
-  top: .8em;
-  width: 28px;
+  top: .55em;
+  width: 24px;
   height: 4px;
   background-color: #FFFBF5;
   border-radius: 500px;
@@ -43,8 +43,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
 }
 
 #instagram {
@@ -73,11 +73,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
+  width: inherit;
+  height: inherit;
   border-radius: 50%;
   background-repeat: no-repeat;
-  background-size: 60px 60px;
+  background-size: 54px 54px;
   transform: rotateZ(-360deg);
   transition: all 400ms linear;
 }

@@ -1,103 +1,117 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Shu-You">
-  <title>Personal Website</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shu-You">
+    <title>Personal Website</title>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-  <link href="mystyle.css" rel="stylesheet">
-  <link href="iconstyle.css" rel="stylesheet">
-
-
-  <style type="text/css">
-    img {
-      border-radius: 50%;
-    }
-
-    #profile {
-      position: relative;
-      display: flex;
-      width: 80%;
-      height: 16em;
-      margin: 9em auto;
-    }
-
-    #avatar {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 15em;
-      height: 15em;
-      transform: translate(-150%, -50%);
-      margin: auto;
-    }
-
-    #avatar_bg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 14em;
-      height: 14.5em;
-      background-color: #F0DED4;
-      border-radius: 50%;
-      transform: translate(-150%, -47%);
-      margin: auto;
-    }
-
-    #name {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 8em;
-      height: 3em;
-      transform: translate(-10%, -78%);
-      margin: auto;
-    }
-
-  </style>
-</head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link href="mystyle.css" rel="stylesheet">
+    <link href="iconstyle.css" rel="stylesheet">
 
 
-<body>
-  <div id="navbar">
-    <nav class="navcontent">
-      <ul>
-        <li><a href="index.html">HOME</a></li>|
-        <li><a href="about.html">ABOUT</a></li>|
-        <li><a href="project.html">PROJECT</a></li>|
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-    </nav>
-  </div>
+    <style type="text/css">
+      img {
+        border-radius: 50%;
+      }
 
-  <div id="profile">
-    <div id="avatar_bg"></div>
-    <img id="avatar" src="asset/avatar.png" alt="Avatar">
+      #profile {
+        position: relative;
+        display: flex;
+        width: 80%;
+        height: 16em;
+        margin: 9em auto;
+      }
 
-    <h1 id="name">
-      <span style="letter-spacing: .3em;">林淑佑</span>
-      <br />
-      Lin Shu-You
-    </h1>
+      #avatar {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15em;
+        height: 15em;
+        transform: translate(-150%, -50%);
+        border-radius: 50%;
+        margin: auto;
+        box-shadow: 0 0 5px #B6BBBE;
+      }
 
-    <div id="action-menu">
-      <div>
-        <a href="https://www.instagram.com/_lsy.310_/" target="_blank"><div class="social-media" id="instagram"></div></a>
-        <a href="https://www.linkedin.com/in/shu-you-lin-b487a8256" target="_blank"><div class="social-media" id="linkedin"></div></a>
-        <a href="https://github.com/lsyyy310" target="_blank"><div class="social-media" id="github"></div></a>
-        <a href="https://www.facebook.com/profile.php?id=100022510747366" target="_blank"><div class="social-media" id="facebook"></div></a>
-      </div>
+      #avatar_bg::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-149%, -48%);
+        width: 14.5em;
+        height: 14.8em;
+        background-color: #F0DED4;
+        border-radius: 50%;
+        margin: auto;
+        animation: avatar_effect 1.2s linear 0s infinite alternate;
+      }
 
-      <!-- Menu icon -->
-      <div id="menu_icon">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      @keyframes avatar_effect {
+        0% {
+          transform: translate(-149%, -48%);
+        }
+        50%{
+          transform: translate(-155%, -46%);
+        }
+        100% {
+          transform: translate(-158%, -47%);
+        }
+      }
+
+      #name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8em;
+        height: 3em;
+        transform: translate(-10%, -75%);
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="background"></div>
+    <div id="navbar">
+      <nav class="navcontent">
+        <ul>
+          <li><a href="index.html" style="color: #FFFBF5;">HOME</a></li>|
+          <li><a href="about.html">ABOUT</a></li>|
+          <li><a href="project.html">PROJECT</a></li>|
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="profile">
+      <div id="avatar_bg"><img id="avatar" src="asset/avatar.png" alt="Avatar"></div>
+
+      <h1 id="name">
+        <span style="letter-spacing: .3em;">林淑佑</span>
+        <br />
+        Lin Shu-You
+      </h1>
+
+      <div id="action-menu">
+        <div>
+          <a href="https://www.instagram.com/_lsy.310_/" target="_blank"><div class="social-media" id="instagram"></div></a>
+          <a href="https://www.linkedin.com/in/shu-you-lin-b487a8256" target="_blank"><div class="social-media" id="linkedin"></div></a>
+          <a href="https://github.com/lsyyy310" target="_blank"><div class="social-media" id="github"></div></a>
+          <a href="https://www.facebook.com/profile.php?id=100022510747366" target="_blank"><div class="social-media" id="facebook"></div></a>
+        </div>
+
+        <!-- Menu icon -->
+        <div id="menu_icon">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </div>
     </div>
-  </div>
 
-</body>
+  </body>
 </html>
