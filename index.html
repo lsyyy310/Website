@@ -6,76 +6,18 @@
     <meta name="author" content="Shu-You">
     <title>Personal Website</title>
 
+    <link rel="icon" href="asset/favicon_32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" type="image/png" href="asset/favicon_180x180.png" sizes="180x180">
+    <!-- Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    <link href="mystyle.css" rel="stylesheet">
-    <link href="iconstyle.css" rel="stylesheet">
-
-
-    <style type="text/css">
-      img {
-        border-radius: 50%;
-      }
-
-      #profile {
-        position: relative;
-        display: flex;
-        width: 80%;
-        height: 16em;
-        margin: 9em auto;
-      }
-
-      #avatar {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 15em;
-        height: 15em;
-        transform: translate(-150%, -50%);
-        border-radius: 50%;
-        margin: auto;
-        box-shadow: 0 0 5px #B6BBBE;
-      }
-
-      #avatar_bg::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-149%, -48%);
-        width: 14.5em;
-        height: 14.8em;
-        background-color: #F0DED4;
-        border-radius: 50%;
-        margin: auto;
-        animation: avatar_effect 1.2s linear 0s infinite alternate;
-      }
-
-      @keyframes avatar_effect {
-        0% {
-          transform: translate(-149%, -48%);
-        }
-        50%{
-          transform: translate(-155%, -46%);
-        }
-        100% {
-          transform: translate(-158%, -47%);
-        }
-      }
-
-      #name {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 8em;
-        height: 3em;
-        transform: translate(-10%, -75%);
-        margin: auto;
-      }
-    </style>
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="fontawesome.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="iconstyle.css">
   </head>
 
   <body>
-    <div id="background"></div>
     <div id="navbar">
       <nav class="navcontent">
         <ul>
@@ -87,8 +29,8 @@
       </nav>
     </div>
 
-    <div id="profile">
-      <div id="avatar_bg"><img id="avatar" src="asset/avatar.png" alt="Avatar"></div>
+    <div id="avatar_bg">
+      <div id="avatar"><img src="asset/avatar.png" alt="Avatar"></div>
 
       <h1 id="name">
         <span style="letter-spacing: .3em;">林淑佑</span>
@@ -98,10 +40,10 @@
 
       <div id="action-menu">
         <div>
-          <a href="https://www.instagram.com/_lsy.310_/" target="_blank"><div class="social-media" id="instagram"></div></a>
-          <a href="https://www.linkedin.com/in/shu-you-lin-b487a8256" target="_blank"><div class="social-media" id="linkedin"></div></a>
-          <a href="https://github.com/lsyyy310" target="_blank"><div class="social-media" id="github"></div></a>
-          <a href="https://www.facebook.com/profile.php?id=100022510747366" target="_blank"><div class="social-media" id="facebook"></div></a>
+          <a href="https://www.instagram.com/_lsy.310_/" target="_blank"><div class="social-icons" id="social-icons_instagram"></div></a>
+          <a href="https://www.linkedin.com/in/shu-you-lin-b487a8256" target="_blank"><div class="social-icons" id="social-icons_linkedin"></div></a>
+          <a href="https://github.com/lsyyy310" target="_blank"><div class="social-icons" id="social-icons_github"></div></a>
+          <a href="https://www.facebook.com/profile.php?id=100022510747366" target="_blank"><div class="social-icons" id="social-icons_facebook"></div></a>
         </div>
 
         <!-- Menu icon -->

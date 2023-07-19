@@ -1,0 +1,68 @@
+html * {
+  font-family: Montserrat, "PingFang TC", "微軟正黑體", sans-serif !important;
+}
+h1 {
+  font-size: 38px;
+  color: #82ABA3;
+  text-shadow: 3px 3px 3px #B6BBBE;
+  text-align: left;
+  line-height:1.3;
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: #82ABA3;
+  text-shadow: 3px 3px 3px #B6BBBE;
+  text-align: left;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: #60656C;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #60656C;
+  margin: 0;
+}
+.text h4 {
+  margin-top: .8em;
+}
+
+.heading {
+  position: absolute;
+  left: 40px;
+  top: 45px;
+  margin: auto;
+}
+.heading::before {content: "- ";}
+.heading::after {content: " -";}
+
+.subheading {
+  position: relative;
+  top: 1em;
+  left: 1em;
+  margin: 0;
+  transform: translateY(-50%);
+}
+
+.subheading::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -1em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: #D7D8EA;
+  transform: translateY(-50%);
+  z-index: -1;
+}
