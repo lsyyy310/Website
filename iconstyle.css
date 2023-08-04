@@ -15,7 +15,7 @@
   height: 54px;
 }
 
-#menu_icon {
+#menu__icon {
   width: 54px;
   height: 54px;
   border-radius: 50%;
@@ -25,7 +25,7 @@
   margin: auto;
 }
 
-#menu_icon .line {
+#menu__icon .line {
   position: relative;
   top: .55rem;
   width: 24px;
@@ -43,17 +43,17 @@
   height: 54px;
 }
 
-#social-icons_instagram {
-  background-image: url(asset/social-icons/instagram.png);
+#social-icons__instagram {
+  background-image: url(./asset/social-icons/instagram.png);
 }
-#social-icons_linkedin {
-  background-image: url(asset/social-icons/linkedin.png);
+#social-icons__linkedin {
+  background-image: url(./asset/social-icons/linkedin.png);
 }
-#social-icons_github {
-  background-image: url(asset/social-icons/github.png);
+#social-icons__github {
+  background-image: url(./asset/social-icons/github.png);
 }
-#social-icons_facebook {
-  background-image: url(asset/social-icons/facebook.png);
+#social-icons__facebook {
+  background-image: url(./asset/social-icons/facebook.png);
 }
 
 #action-menu [id*="social-icons"] {
@@ -83,16 +83,16 @@
     transform: rotateZ(360deg);
     transition: all 400ms linear;
   }
-  #action-menu:hover #social-icons_instagram {
+  #action-menu:hover #social-icons__instagram {
     left: 110%;
   }
-  #action-menu:hover #social-icons_linkedin {
+  #action-menu:hover #social-icons__linkedin {
     left: 220%;
   }
-  #action-menu:hover #social-icons_github {
+  #action-menu:hover #social-icons__github {
     left: 330%;
   }
-  #action-menu:hover #social-icons_facebook {
+  #action-menu:hover #social-icons__facebook {
     left: 440%;
   }
 }

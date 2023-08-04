@@ -27,14 +27,12 @@ a:hover {
   position: relative;
   z-index: 9999;
 }
-div[id*="curtain"] {
+#curtain {
   position: fixed;
   left: 0;
   height: 100vh;
   width: 100vw;
-/*  background-color: #60656C;*/
-  background-color: #ffffff;
-  opacity: 70%;
+  background-color: #FFFBF5;
 }
 #ring {
   text-align: center;
@@ -55,8 +53,8 @@ div[id*="curtain"] {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  box-shadow: 2px 1px 2px #ABF8E7;
-  animation: ring--rotation 1.5s ease-out infinite;
+  box-shadow: 2.5px 1px 2px #AAF0E4;
+  animation: ring--rotation .8s ease-out infinite;
 }
 @keyframes ring--rotation {
   from {
@@ -68,21 +66,20 @@ div[id*="curtain"] {
 }
 #ring::after {
   content: "LOADING...";
-  font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: #A9C7C5;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: change-opacity 1s linear infinite alternate;
+  animation: change-opacity .5s ease-out infinite alternate;
 }
 @keyframes change-opacity {
   from {
     opacity: 80%;
   }
   to {
-    opacity: 30%;
+    opacity: 20%;
   }
 }
 /* End Preloader */
