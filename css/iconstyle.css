@@ -44,16 +44,16 @@
 }
 
 #social-icons__instagram {
-  background-image: url(./asset/social-icons/instagram.png);
+  background-image: url(../asset/social-icons/instagram.png);
 }
 #social-icons__linkedin {
-  background-image: url(./asset/social-icons/linkedin.png);
+  background-image: url(../asset/social-icons/linkedin.png);
 }
 #social-icons__github {
-  background-image: url(./asset/social-icons/github.png);
+  background-image: url(../asset/social-icons/github.png);
 }
 #social-icons__facebook {
-  background-image: url(./asset/social-icons/facebook.png);
+  background-image: url(../asset/social-icons/facebook.png);
 }
 
 #action-menu [id*="social-icons"] {

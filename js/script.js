@@ -64,11 +64,7 @@ function writeHTML () {
   // in index.html
   if (currentUrl.includes("/index.html") === true) {
     const menuIcon = document.getElementById("menu__icon");
-    menuIcon.innerHTML = `
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    `
+    menuIcon.innerHTML = `<div class="line"></div>`.repeat(3)
   }
 }
 
