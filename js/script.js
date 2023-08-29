@@ -1,15 +1,17 @@
+const currentUrl = location.pathname,
+      urls = {"index": "/index.html"}
+
+function sleep (seconds) {
+  return new Promise(resolve => {
+    setTimeout(resolve, seconds * 1000);
+  })
+}
 async function preload () {
   const preloader = document.getElementById("preloader");
   preloader.innerHTML = `
       <div id="curtain"></div>
       <div id="ring"></div>
   `
-
-  function sleep (seconds) {
-    return new Promise(resolve => {
-      setTimeout(resolve, seconds * 1000);
-    })
-  }
 
   const head = document.head,
         ring = document.getElementById("ring"),
@@ -39,31 +41,42 @@ async function preload () {
   await drawCurtains();
   preloader.remove();
   preloaderStyle.remove();
-  // preloaderStyle.remove();
+  return sleep(0)
 }
 // End function preload
 
 function writeHTML () {
-  const currentUrl = location.pathname,
-        bottomExclusion = ["/index.html"],
-        navBar = document.getElementById("nav-bar");
-      navBar.innerHTML = `
-        <nav id="navcontent--right">
-            <a class="menu-item" href="./index.html">HOME</a>
-            <a class="menu-item" href="./about.html">ABOUT</a>
-            <a class="menu-item" href="./project.html">PROJECT</a>
-            <a class="menu-item" href="./contact.html">CONTACT</a>
-        </nav>
-      `
-  for (url of bottomExclusion) {
-    if (currentUrl.includes(url) === false) {
+  const navBar = document.getElementById("nav-bar"),
+        header = document.querySelector("header");
+  navBar.innerHTML = `
+    <nav id="navcontent--right">
+        <a class="menu-item" href="./index.html">HOME</a>
+        <a class="menu-item" href="./about.html">ABOUT</a>
+        <a class="menu-item" href="./project.html">PROJECT</a>
+        <a class="menu-item" href="./contact.html">CONTACT</a>
+    </nav>
+  `;
+  if (header !== null) {header.setAttribute("copyright", "2023 ShuYou. All Rights Reserved.");}
+  if (currentUrl.includes(urls["index"]) === false) {
       const pageBottom = document.getElementById("page__bottom");
-      pageBottom.setAttribute("date", "Aug 26, 2023");
-      break
+      pageBottom.setAttribute("date", "Aug 28, 2023");
     }
+}
+
+async function typingEffect (word) {
+  const name = document.getElementById("name");
+  for(let letter of word) {
+    name.innerHTML += letter;
+    await sleep(0.15);
   }
 }
 
-
-document.addEventListener("DOMContentLoaded", () => {preload(); writeHTML();});
+document.addEventListener("DOMContentLoaded",
+  async () => {
+    writeHTML();
+    await preload();
+    // in index.html
+    if (currentUrl.includes(urls["index"])){typingEffect("ShuYou Lin");}
+  }
+);
 // document.addEventListener("load", )

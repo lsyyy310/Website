@@ -1,6 +1,3 @@
-.fa-brands::before {
-  z-index: 999;
-}
 html {
   background-color: transparent;
   overflow-x: hidden;
@@ -9,7 +6,7 @@ html {
   font-size: 16px;
  }
 body {
-  position: relative;
+  position: relative !important;
   width: 100%;
   min-height: 100%;
   margin: 0;
@@ -21,11 +18,20 @@ body {
   z-index: -1;
 }
 header {
-  position: fixed !important;
+  position: fixed;
   width: 80vw;
   min-width: 720px;
   height: 100vh;
+  color: #75809C;
   background-color: transparent;
+}
+header::after {
+  content: "\00A9" " " attr(copyright);
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
 }
 hr {
   width: 90%;
@@ -34,10 +40,15 @@ hr {
 a:hover {
   cursor: pointer;
 }
-.center {
+.center--h{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+.center--v {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 /* Preloader */
 #preloader * {
@@ -146,7 +157,7 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -48%);
   background-color: #F6F6F6;
-  border-radius: 10px;
+  border-radius: 8px;
   z-index: -1;
 }
 .menu-item:hover {
@@ -171,18 +182,53 @@ a:hover {
 }
 #avatar img{
   position: relative;
-  top: 50%;
-  left: 50%;
   width: inherit;
   height: inherit;
   border-radius: 50%;
   margin: auto;
 }
-#name {
-  top: 17rem;
-  width: 13rem;
-  height: auto;
-  margin: 1rem;
+#social-media {
+  top: 24.7rem;
+  width: 15rem;
+  height: 1.5rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-links {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+}
+.social-links::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  z-index: -1;
+}
+.social-links:hover::before {
+  background-color: #82ABA3;
+  opacity: 70%;
+}
+.social-links:hover .social-icons {
+  color: #FFFFFF;
+  font-size: 1.35rem;
+  transition: all 250ms;
+}
+.fa-instagram {color: #FF2E8C;}.fa-linkedin-in {color: #0073B2;}.fa-github {color: #000000;}.fa-facebook-f {color: #0671e7;}
+.social-icons {
+  width: inherit;
+  height: inherit;
+  font-size: 1.25rem;
+}
+.social-icons::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 /* End home page avatar */
 

@@ -1,14 +1,14 @@
 html * {
-  font-family: Montserrat, "PingFang TC", "微軟正黑體", sans-serif !important;
+  font-family: Montserrat, "PingFang TC", "微軟正黑體", sans-serif;
   letter-spacing: .5px;
   word-spacing: 2px;
 }
-h1, h2, h3, h4, h5, h7 {
+h1, h2, h3, h4, h5 {
   margin: 0;
+  text-align: left;
 }
 h1, h2 {
   letter-spacing: 1px;
-  text-align: left;
 }
 h1 {
   font-size: 36px;
@@ -31,11 +31,7 @@ h5 {
   font-size: 16px;
   font-weight: 500;
 }
-h6 {
-  font-size: 16px;
-  font-weight: normal;
-}
-.text h6 {
+.text * {
   margin-top: .6rem;
 }
 
