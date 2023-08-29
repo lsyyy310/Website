@@ -57,10 +57,12 @@ function writeHTML () {
     </nav>
   `;
   if (header !== null) {header.setAttribute("copyright", "2023 ShuYou. All Rights Reserved.");}
-  if (currentUrl === "" || currentUrl.includes(urls["index"]) === false) {
-      const pageBottom = document.getElementById("page__bottom");
-      pageBottom.setAttribute("date", "Aug 28, 2023");
-    }
+  if (currentUrl === "" || currentUrl === urls["index"]) {
+    // pass
+  } else {
+    const pageBottom = document.getElementById("page__bottom");
+    pageBottom.setAttribute("date", "Aug 28, 2023");
+  }
 }
 
 async function typingEffect (word) {
@@ -76,7 +78,7 @@ document.addEventListener("DOMContentLoaded",
     writeHTML();
     await preload();
     // in index.html
-    if (currentUrl.includes(urls["index"])){typingEffect("ShuYou Lin");}
+    if (currentUrl === "" || currentUrl === urls["index"]){typingEffect("ShuYou Lin");}
   }
 );
 // document.addEventListener("load", )
