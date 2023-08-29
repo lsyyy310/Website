@@ -1,5 +1,5 @@
-const currentUrl = location.pathname,
-      urls = {"index": "/index.html"}
+const currentUrl = location.pathname.split("/").pop(),
+      urls = {"index": "index.html"}
 
 function sleep (seconds) {
   return new Promise(resolve => {
@@ -57,7 +57,7 @@ function writeHTML () {
     </nav>
   `;
   if (header !== null) {header.setAttribute("copyright", "2023 ShuYou. All Rights Reserved.");}
-  if (currentUrl.includes(urls["index"]) === false) {
+  if (currentUrl === "" || currentUrl.includes(urls["index"]) === false) {
       const pageBottom = document.getElementById("page__bottom");
       pageBottom.setAttribute("date", "Aug 28, 2023");
     }
