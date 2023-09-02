@@ -1,5 +1,5 @@
 html {
-  background-color: transparent;
+  background-color: #F6F6F6;
   overflow-x: hidden;
   width: 100vw;
   height: 100vh;
@@ -17,27 +17,7 @@ body {
   background-attachment: fixed;
   z-index: -1;
 }
-header {
-  position: fixed;
-  width: 80vw;
-  min-width: 720px;
-  height: 100vh;
-  color: #75809C;
-  background-color: transparent;
-}
-header::after {
-  content: "\00A9" " " attr(copyright);
-  position: absolute;
-  bottom: 12%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 14px;
-}
-hr {
-  width: 90%;
-  border-top: 1px solid #BFC2CB;
-}
-a:hover {
+a {
   cursor: pointer;
 }
 .center--h{
@@ -49,6 +29,63 @@ a:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 80vw;
+  height: 100vh;
+  color: #75809C;
+  background-color: transparent;
+}
+header::after {
+  content: "\00A9  2023 ShuYou. All Rights Reserved.";
+  text-align: center;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+#side-header {
+  display: initial;
+  top: 0;
+  left: 0;
+  width: 25vw;
+  background-color: #F6F6F6;
+  box-shadow: 1px 0 5px #B6BBBE;
+}
+#side-header__button {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #82ABA3;
+  opacity: 65%;
+  transition: all 200ms;
+}
+#side-header__button:hover {
+  background-color: #F6F6F6;
+  transition: all 200ms;
+}
+.fa-bars, .fa-xmark {font-size: 1.35rem; color: #F6F6F6; opacity: 100%; transition: all 200ms;}
+#side-header__button:hover .fa-bars {color: #82ABA3; transition: all 200ms;}
+#side-header__button:hover .fa-xmark {color: #82ABA3; transition: all 200ms;}
+
+@media screen and (max-width: 890px) {
+  #side-header {
+    display: none;
+  }
+  #side-header__button {
+    display: initial;
+  }
+}
+#side-header::after {
+  content: "\00A9  2023 ShuYou.\a All Rights Reserved.";
+  white-space: pre;
+  width: 80%;
 }
 /* Preloader */
 #preloader * {
@@ -112,8 +149,8 @@ a:hover {
 }
 /* End Preloader */
 
-/* nav bar */
-#nav-bar {
+/* Navbar */
+#navbar {
   position: sticky;
   top: 0;
   width: 100%;
@@ -123,20 +160,22 @@ a:hover {
   padding: 0;
   z-index: 999;
 }
-#nav-bar [id*="navcontent--"] {
+#navbar [id*="navbar--"] {
   position: absolute;
   width: auto;
   height: 100%;
-  max-width: 65%;
-  color: #82ABA3;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
 }
-#navcontent--right {
+#navbar--left {
+  left: 2.5rem;
+}
+#navbar--right {
+  max-width: 65%;
   right: 1.5rem;
 }
-.menu-item {
+.menu__item {
   position: relative;
   width: 6.5rem;
   height: 1rem;
@@ -148,7 +187,7 @@ a:hover {
   margin: auto 1rem;
   transition: font-size 200ms;
 }
-.menu-item::before {
+.menu__item::before {
   content: "";
   width: 115%;
   height: 2.5rem;
@@ -160,21 +199,21 @@ a:hover {
   border-radius: 8px;
   z-index: -1;
 }
-.menu-item:hover {
+.menu__item:hover {
   color: #F6F6F6;
   font-weight: 700;
-  transition: all 150ms;
+  transition: all 200ms;
 }
-.menu-item:hover::before{
+.menu__item:hover::before{
   background-color: #82ABA3;
   opacity: 70%;
-  transition: all 150ms;
+  transition: all 200ms;
 }
-/* End nav bar */
+/* End Navbar */
 
-/* home page avatar */
+/* homePage avatar */
 #avatar {
-  top: 3rem;
+  top: 8rem;
   width: 14rem;
   height: 14rem;
   border-radius: 50%;
@@ -188,19 +227,19 @@ a:hover {
   margin: auto;
 }
 #social-media {
-  top: 24.7rem;
+  top: 29.7rem;
   width: 15rem;
   height: 1.5rem;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
 }
-.social-links {
+.social-link {
   position: relative;
   width: 2rem;
   height: 2rem;
 }
-.social-links::before {
+.social-link::before {
   content: "";
   position: absolute;
   width: inherit;
@@ -209,49 +248,53 @@ a:hover {
   border-radius: 5px;
   z-index: -1;
 }
-.social-links:hover::before {
+.social-link:hover::before {
   background-color: #82ABA3;
   opacity: 70%;
 }
-.social-links:hover .social-icons {
+.social-link:hover .social-icon {
   color: #FFFFFF;
   font-size: 1.35rem;
   transition: all 250ms;
 }
 .fa-instagram {color: #FF2E8C;}.fa-linkedin-in {color: #0073B2;}.fa-github {color: #000000;}.fa-facebook-f {color: #0671e7;}
-.social-icons {
+.social-icon {
   width: inherit;
   height: inherit;
   font-size: 1.25rem;
 }
-.social-icons::before {
+.social-icon::before {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* End home page avatar */
+/* End homePage avatar */
 
-#body__bg {
-  position: relative;
-  width: 80%;
-  min-width: 1000px;
-  min-height: 1000px;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  box-shadow: 0 0 8px #B6BBBE;
-  margin: 5rem auto 3rem;
+#main-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75vw;
+  min-height: 100vh;
+  background-color: transparent;
 }
-#page__bottom {
-  position: relative;
-  width: 80%;
-  height: 64px;
+#footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 75vw;
+  min-height: 64px;
   font-size: 14px;
   color: #75809C;
-  margin: 0;
-  padding: 0 10%;
+  background-color: transparent;
 }
-#page__bottom::after {
+@media screen and (max-width: 768px) {
+  /*#footer {
+    width: 95%;*/
+  }
+}
+#footer::after {
   content: "This page was last modified on " attr(date);
   text-align: center;
   position: absolute;
@@ -260,32 +303,16 @@ a:hover {
   margin: auto;
   z-index: -1;
 }
-@media screen and (max-width: 768px) {
-  #body__bg {
-    width: 95%;
-    margin: 2rem auto 1.5rem;
-  }
-  #page__bottom {
-    width: 95%;
-    padding: 0 2.5%;
-  }
+#footer hr {
+  top: -1rem;
+  width: 90%;
+
 }
-#content {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding-top: 5rem;
-}
-.paragraph {
-  position: relative;
-  width: auto;
-  margin: 2.5rem 3rem;
-}
-.text {
+/*.text {
   position: relative;
   margin: 0 auto;
   padding: 20px 40px;
-}
+}*/
 
 #photo {
   position: relative;

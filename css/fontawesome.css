@@ -3,6 +3,9 @@ html * {
   letter-spacing: .5px;
   word-spacing: 2px;
 }
+hr {
+  border-top: 1px solid #BFC2CB;
+}
 h1, h2, h3, h4, h5 {
   margin: 0;
   text-align: left;

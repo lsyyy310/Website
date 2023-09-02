@@ -46,22 +46,21 @@ async function preload () {
 // End function preload
 
 function writeHTML () {
-  const navBar = document.getElementById("nav-bar"),
-        header = document.querySelector("header");
-  navBar.innerHTML = `
-    <nav id="navcontent--right">
-        <a class="menu-item" href="./index.html">HOME</a>
-        <a class="menu-item" href="./about.html">ABOUT</a>
-        <a class="menu-item" href="./project.html">PROJECT</a>
-        <a class="menu-item" href="./contact.html">CONTACT</a>
+  const navbar = document.getElementById("navbar"),
+        footer = document.getElementById("footer");
+  navbar.innerHTML = `
+    <div id="navbar--left">
+      <button id="side-header__button" class="center--v"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <nav id="navbar--right">
+      <a class="menu__item" href="./index.html">HOME</a>
+      <a class="menu__item" href="./about.html">ABOUT</a>
+      <a class="menu__item" href="./project.html">PROJECT</a>
+      <a class="menu__item" href="./contact.html">CONTACT</a>
     </nav>
   `;
-  if (header !== null) {header.setAttribute("copyright", "2023 ShuYou. All Rights Reserved.");}
-  if (currentUrl === "" || currentUrl === urls["index"]) {
-    // pass
-  } else {
-    const pageBottom = document.getElementById("page__bottom");
-    pageBottom.setAttribute("date", "Aug 28, 2023");
+  if (footer !== null) {
+    footer.setAttribute("date", "Sep 2, 2023")
   }
 }
 
@@ -73,12 +72,23 @@ async function typingEffect (word) {
   }
 }
 
+function changeIcon (button) {
+  button.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+}
+
+
 document.addEventListener("DOMContentLoaded",
-  async () => {
-    writeHTML();
-    await preload();
-    // in index.html
-    if (currentUrl === "" || currentUrl === urls["index"]){typingEffect("ShuYou Lin");}
+  () => {
+    ~async function () {
+      writeHTML();
+      await preload();
+      // in index.html
+      if (currentUrl === "" || currentUrl === urls["index"]){typingEffect("ShuYou Lin");}
+    }();
+    ~function buttonListener () {
+      const sideHeaderButton = document.getElementById("side-header__button");
+      sideHeaderButton.addEventListener("click", () => {changeIcon(sideHeaderButton)})
+    }();
   }
+
 );
-// document.addEventListener("load", )
