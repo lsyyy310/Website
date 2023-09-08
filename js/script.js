@@ -1,12 +1,12 @@
 const currentUrl = location.pathname.split("/").pop(),
       urls = {"index": "index.html"}
 
-function sleep (seconds) {
+function sleep(seconds) {
   return new Promise(resolve => {
     setTimeout(resolve, seconds * 1000);
   })
 }
-async function preload () {
+async function preload() {
   const preloader = document.getElementById("preloader");
   preloader.innerHTML = `
       <div id="curtain"></div>
@@ -21,10 +21,11 @@ async function preload () {
     return sleep(rotationDuration * 1.5)
   }
 
-  function setFontSize () {
+  function setFontSize() {
     if (ringWidth == 104) {
       return "16px"
-    } else {
+    }
+    else {
       return `${Math.round(ringWidth / 7)}px`
     }
   }
@@ -64,7 +65,7 @@ function writeHTML () {
   }
 }
 
-async function typingEffect (word) {
+async function typingEffect(word) {
   const name = document.getElementById("name");
   for(let letter of word) {
     name.innerHTML += letter;
@@ -72,8 +73,20 @@ async function typingEffect (word) {
   }
 }
 
-function changeIcon (button) {
-  button.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+function changeIcon(button) {
+  const bars = `<i class="fa-solid fa-bars"></i>`,
+        xMark =  `<i class="fa-solid fa-xmark"></i>`,
+        sideHeader = document.getElementById("side-header");
+  let sideHeaderDisplay = getComputedStyle(sideHeader).display;
+  if (sideHeaderDisplay === "initial") {
+    button.innerHTML = bars;
+    sideHeader.style = ""
+
+
+  }
+  else {
+    button.innerHTML = xMark;
+  }
 }
 
 
